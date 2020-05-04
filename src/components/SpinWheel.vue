@@ -7,7 +7,8 @@
     <div class="wheel-bg" 
       :class="{freeze: freeze}" 
       :style="{ 'transform': `rotate(${wheelDeg}deg)`,
-                'transition': `transform ${time}s ease-in-out`}"
+                'transition': `transform ${time}s ease-in-out`,
+                'background': wheelBackground}"
     >
       <div class="prize-list">
         <div class="prize-item-wrapper" v-for="(item,index) in prizeList" :key="index">
@@ -39,6 +40,10 @@ export default {
       type: Number,
       default: 4
     },
+    wheelBackground: {
+      type: String,
+      default: () => 'url(https://cdn.clipart.email/7169421ce2382b291dd69957c1f89dcf_free-black-circle-transparent-download-free-clip-art-free-clip-_900-600.jpeg) no-repeat center center'
+    }
   },
   data() {
     return {
@@ -96,8 +101,8 @@ export default {
 <style lang="scss">
 
 
-$wheelWidth: 300px;
-$wheelHeight: 300px;
+$wheelWidth: 325px;
+$wheelHeight: 325px;
 
 $prizeWidth: $wheelWidth / 2;
 $prizeHeight: $wheelHeight / 2;
@@ -105,10 +110,14 @@ $prizeHeight: $wheelHeight / 2;
 .wheel-wrapper {
   width: $wheelWidth;
   height: $wheelHeight;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+  margin: 0 auto;
+
+  position: relative;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
 }
 
 .wheel-pointer {
@@ -119,8 +128,8 @@ $prizeHeight: $wheelHeight / 2;
   background: yellow;
 
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   line-height: 60px;
@@ -145,7 +154,7 @@ $prizeHeight: $wheelHeight / 2;
   overflow: hidden;
   // transition: transform $transitionTime ease-in-out;
 
-  background: #7eef97;
+  // background: #7eef97;
 
   &.freeze {
     transition: none;
