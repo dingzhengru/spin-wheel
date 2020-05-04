@@ -4,5 +4,7 @@
 **使用 Vue CLI 建立的專案，但主要是裡面的 src/components/SpinWheel.vue**
 
 ## props 
-* prizeList: Array | 獎項列表 | ex: [{icon: "", name: ""}]
-* time: Number | 旋轉動畫的時間 | ex: 5 (5秒)
+| 型態    | 說明            | 範例                    |
+|-------- |---------------- |------------------------ |
+| Array   | 獎項列表        | [{icon: "", name: ""}]  |
+| Number  | 旋轉動畫的時間   | 5 (5秒)                  |
