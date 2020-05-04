@@ -42,7 +42,7 @@ export default {
     },
     wheelBackground: {
       type: String,
-      default: () => 'url(https://cdn.clipart.email/7169421ce2382b291dd69957c1f89dcf_free-black-circle-transparent-download-free-clip-art-free-clip-_900-600.jpeg) no-repeat center center'
+      default: () => '#7eef97'
     }
   },
   data() {

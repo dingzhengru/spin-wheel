@@ -6,6 +6,7 @@
   <SpinWheel 
     :prizeList="prizeList"
     :time="5"
+    wheelBackground="url(https://toppng.com/uploads/preview/obs-transparent-webcam-green-circle-overlay-11563292758bazodjcd2o.png) no-repeat center center"
   />
 
 </div>
